@@ -6,6 +6,7 @@ import logo from "./images/whiteLogo.jpg";
 
 function Login() {
   const history = useHistory();
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -43,6 +44,13 @@ function Login() {
         <h1>Sign-in</h1>
 
         <form>
+          <h5>Name</h5>
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+
           <h5>E-mail</h5>
           <input
             type="text"
@@ -66,7 +74,7 @@ function Login() {
           </button>
         </form>
 
-        <p>By signing-in you agree to Sameer's amazon CLONE Terms of use</p>
+        <p>By signing-in you agree to Umair's amazon CLONE Terms of use</p>
 
         <button onClick={register} className="login__registerButton">
           Create your Amazon Account
